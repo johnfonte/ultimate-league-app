@@ -108,7 +108,7 @@ class Migration(DataMigration):
         },
         'pybb.profile': {
             'Meta': {'object_name': 'Profile'},
-            'avatar': ('sorl.thumbnail.fields.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'avatar': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'ban_status': ('django.db.models.fields.SmallIntegerField', [], {'default': '0'}),
             'ban_till': ('django.db.models.fields.DateTimeField', [], {'default': 'None', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),

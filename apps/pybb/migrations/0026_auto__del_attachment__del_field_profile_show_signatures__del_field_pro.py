@@ -52,7 +52,7 @@ class Migration(SchemaMigration):
 
         # Adding field 'Profile.avatar'
         db.add_column('pybb_profile', 'avatar',
-                      self.gf('sorl.thumbnail.fields.ImageField')(max_length=100, null=True, blank=True),
+                      self.gf('django.db.models.fields.files.ImageField')(max_length=100, null=True, blank=True),
                       keep_default=False)
 
         # Adding field 'Profile.signature'

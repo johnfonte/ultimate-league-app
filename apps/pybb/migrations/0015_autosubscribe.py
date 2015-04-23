@@ -110,7 +110,7 @@ class Migration(SchemaMigration):
         'pybb.profile': {
             'Meta': {'object_name': 'Profile'},
             'autosubscribe': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
-            'avatar': ('sorl.thumbnail.fields.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'avatar': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'language': ('django.db.models.fields.CharField', [], {'default': "'Russian'", 'max_length': '10', 'blank': 'True'}),
             'markup': ('django.db.models.fields.CharField', [], {'default': "'bbcode'", 'max_length': '15'}),

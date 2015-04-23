@@ -9,7 +9,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         
         # Adding field 'Profile.avatar'
-        db.add_column('pybb_profile', 'avatar', self.gf('sorl.thumbnail.fields.ImageField')(max_length=100, null=True, blank=True), keep_default=False)
+        db.add_column('pybb_profile', 'avatar', self.gf('django.db.models.fields.files.ImageField')(max_length=100, null=True, blank=True), keep_default=False)
 
 
     def backwards(self, orm):
@@ -99,7 +99,7 @@ class Migration(SchemaMigration):
         },
         'pybb.profile': {
             'Meta': {'object_name': 'Profile'},
-            'avatar': ('sorl.thumbnail.fields.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'avatar': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'ban_status': ('django.db.models.fields.SmallIntegerField', [], {'default': '0'}),
             'ban_till': ('django.db.models.fields.DateTimeField', [], {'default': 'None', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
